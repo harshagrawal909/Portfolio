@@ -100,9 +100,8 @@ backButton.addEventListener('click', () => {
 skillLists.forEach(list => list.classList.remove('active'));
 
 const form = document.getElementById('contactForm');
-
-    form.addEventListener('submit', function(event) {
-        setTimeout(function() {
-            form.reset();
-        },500)
-    })
+form.addEventListener('submit', function(event) {
+    setTimeout(function() {
+        form.reset();
+    },500)
+})
