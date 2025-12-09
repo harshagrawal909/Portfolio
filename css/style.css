@@ -1078,3 +1078,8 @@ h3.my-profession{
     color:var(--text-black-700);
     margin-bottom: 15px;
 }
+
+.about .about-content .experience .experience-details a.timeline-link{
+    text-decoration: underline;
+    color:var(--skin-color);
+}
