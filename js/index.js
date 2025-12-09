@@ -105,3 +105,36 @@ form.addEventListener('submit', function(event) {
         form.reset();
     },500)
 })
+
+
+const clickableExperiences = document.querySelectorAll('.clickable-experience');
+const experienceDetails = document.querySelectorAll('.experience-details');
+const experienceMainList = document.querySelector('.experience-main-list');
+const experienceBackButton = document.querySelector('.experience-back-button');
+
+clickableExperiences.forEach(item => {
+    item.addEventListener('click', function() {
+        if (experienceMainList) {
+            experienceMainList.classList.remove('active');
+        }
+        if (experienceBackButton) {
+            experienceBackButton.style.display = 'block';
+        }
+        const targetId = this.getAttribute('data-experience') + '-details';
+        experienceDetails.forEach(details => details.classList.remove('active'));
+        const targetDetail = document.getElementById(targetId);
+        if (targetDetail) {
+            targetDetail.classList.add('active');
+        }
+    });
+});
+
+if (experienceBackButton) {
+    experienceBackButton.addEventListener('click', function() {
+        if (experienceMainList) {
+            experienceMainList.classList.add('active');
+        }
+        this.style.display = 'none';
+        experienceDetails.forEach(details => details.classList.remove('active'));
+    });
+}

@@ -450,7 +450,6 @@ h3.my-profession{
     color:inherit;
 }
 
-
 .about .about-content .personal-info .buttons{
     margin-top:30px;
 }
@@ -572,11 +571,11 @@ h3.my-profession{
 .about .about-content .timeline .timeline-item{
     position:relative;
     padding-left:37px;
-    padding-bottom:50px;
+    padding-bottom:30px;
 }
 
 .about .about-content .timeline .timeline-item:last-child{
-    padding-bottom:0;
+    padding-bottom:30;
 }
 
 .about .about-content .timeline .timeline-item::before{
@@ -626,7 +625,6 @@ h3.my-profession{
 }
 
 /* SERVICE */
-
 .service .container{
     padding-bottom:40px;
 }
@@ -862,7 +860,6 @@ h3.my-profession{
 }
 
 /* CONTACT */
-
 .contact-title{
     color:var(--skin-color);
     text-align: center;
@@ -1035,7 +1032,49 @@ h3.my-profession{
     to {
         opacity: 1;
     }
-
 }
 
 
+.about .about-content .experience .experience-main-list,
+.about .about-content .experience .experience-details {
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.about .about-content .experience .experience-main-list.active,
+.about .about-content .experience .experience-details.active {
+    display: block;
+}
+
+.about .about-content .experience .timeline-item.clickable-experience:hover {
+    cursor: pointer;
+    background-color: var(--bg-black-50); 
+    border-radius: 10px;
+    padding:35px;
+}
+
+.about .about-content .experience .experience-details {
+    padding: 30px 15px; 
+    background-color: var(--bg-black-100);
+    border: 1px solid var(--bg-black-50);
+    border-radius: 10px;
+}
+
+.about .about-content .experience .experience-back-button {
+    display: none;
+    margin-top: 20px;
+}
+
+.about .about-content .experience .experience-back-button:hover{
+    transform:scale(1.05);
+}
+
+.about .about-content .experience .experience-details p.timeline-text {
+    line-height:25px;
+    font-size:16px;
+    text-align:justify;
+    color:var(--text-black-700);
+    margin-bottom: 15px;
+}
