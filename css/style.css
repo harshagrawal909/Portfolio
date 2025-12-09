@@ -419,10 +419,6 @@ h3.my-profession{
     color:var(--text-black-700);
 }
 
-.about .about-content .about-text .email{
-    font-size:12px;
-}
-
 .about .about-content .personal-info{
     flex:0 0 60%;
     max-width:60%;
@@ -452,6 +448,10 @@ h3.my-profession{
 .about .about-content .personal-info .info-item p span a{
     text-decoration: underline;
     color:inherit;
+}
+
+.about .about-content .personal-info .info-item p span a email{
+    font-size:12px;
 }
 
 .about .about-content .personal-info .buttons{
@@ -1040,3 +1040,4 @@ h3.my-profession{
     }
 
 }
+
