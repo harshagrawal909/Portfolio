@@ -419,6 +419,10 @@ h3.my-profession{
     color:var(--text-black-700);
 }
 
+.about .about-content .about-text .email{
+    font-size:12px;
+}
+
 .about .about-content .personal-info{
     flex:0 0 60%;
     max-width:60%;
@@ -1034,4 +1038,5 @@ h3.my-profession{
     to {
         opacity: 1;
     }
+
 }
