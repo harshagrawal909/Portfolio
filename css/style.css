@@ -748,6 +748,84 @@ h3.my-profession{
     line-height:25px;
 }
 
+.portfolio .portfolio-main-list {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+
+.portfolio .portfolio-details{
+    display:none;
+    animation: fadeIn 0.5s ease;
+}
+
+.portfolio .portfolio-main-list.active{
+    display: flex;
+}
+
+
+.portfolio .portfolio-details.active {
+    display:block;
+}
+
+.portfolio .portfolio-item.clickable-project:hover {
+    cursor: pointer;
+    background-color: var(--bg-black-50); 
+    border-radius: 5px;
+    padding:5px;
+}
+
+.portfolio .portfolio-details {
+    padding: 30px 15px; 
+    background-color: var(--bg-black-100);
+    border: 1px solid var(--bg-black-50);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.portfolio .portfolio-details .project-title {
+    font-weight:700;
+    font-size:24px;
+    margin-bottom:15px;
+    text-transform: capitalize;
+    color:var(--text-black-900);
+}
+
+.portfolio .portfolio-details .project-category {
+    font-weight:400;
+    font-size:16px;
+    margin-bottom:15px;
+    color:var(--text-black-700);
+}
+
+.portfolio .portfolio-details .project-img img {
+    max-width: 30%;
+    height: auto;
+    margin: auto;
+    border-radius: 8px;
+    margin-bottom:20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.portfolio .portfolio-details .project-description {
+    line-height:25px;
+    font-size:16px;
+    text-align:justify;
+    color:var(--text-black-700);
+    margin-bottom: 15px;
+}
+
+.portfolio .portfolio-back-button {
+    display: none;
+    margin-top: 20px;
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.portfolio .portfolio-back-button:hover{
+    transform:scale(1.05);
+}
+
 /* Involvements */
 .involvement .section-title {
     margin-bottom: 40px;
@@ -984,7 +1062,7 @@ h3.my-profession{
     .contact .contact-info-item,
     .portfolio .portfolio-item,
     .service .service-item{
-        flex:0 0 100%;
+        flex:0 0 50%;
         max-width:50%;
     }
     .about .about-content .education,
@@ -1083,3 +1161,5 @@ h3.my-profession{
     text-decoration: underline;
     color:var(--skin-color);
 }
+
+

@@ -138,3 +138,37 @@ if (experienceBackButton) {
         experienceDetails.forEach(details => details.classList.remove('active'));
     });
 }
+
+
+// Portfolio Detail Toggle Logic
+const clickableProjects = document.querySelectorAll('.clickable-project');
+const portfolioDetails = document.querySelectorAll('.portfolio-details');
+const portfolioMainList = document.querySelector('.portfolio-main-list');
+const portfolioBackButton = document.querySelector('.portfolio-back-button');
+
+clickableProjects.forEach(item => {
+    item.addEventListener('click', function() {
+        if (portfolioMainList) {
+            portfolioMainList.classList.remove('active');
+        }
+        if (portfolioBackButton) {
+            portfolioBackButton.style.display = 'block';
+        }
+        const targetId = this.getAttribute('data-project') + '-details';
+        portfolioDetails.forEach(details => details.classList.remove('active'));
+        const targetDetail = document.getElementById(targetId);
+        if (targetDetail) {
+            targetDetail.classList.add('active');
+        }
+    });
+});
+
+if (portfolioBackButton) {
+    portfolioBackButton.addEventListener('click', function() {
+        if (portfolioMainList) {
+            portfolioMainList.classList.add('active');
+        }
+        this.style.display = 'none';
+        portfolioDetails.forEach(details => details.classList.remove('active'));
+    });
+}
